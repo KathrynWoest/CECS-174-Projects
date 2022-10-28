@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>Main Code.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #629755; font-style: italic;}
+.s4 { color: #6a8759;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main Code.py</font>
+</center></td></tr></table>
+<pre><span class="s0">def </span><span class="s1">stock(n_stock</span><span class="s0">, </span><span class="s1">d_stock</span><span class="s0">, </span><span class="s1">q_stock</span><span class="s0">, </span><span class="s1">o_stock</span><span class="s0">, </span><span class="s1">f_stock):  </span><span class="s2"># print stock function, Chris Kau</span>
+    <span class="s3">&quot;&quot;&quot;description: prints the stock of the machine 
+       parameters: each type of possible currency for stock 
+       returns: a printed stock menu, no values&quot;&quot;&quot;</span>
+    <span class="s1">i_n_stock = int(n_stock)  </span><span class="s2"># each type of stock as integers</span>
+    <span class="s1">i_d_stock = int(d_stock)</span>
+    <span class="s1">i_q_stock = int(q_stock)</span>
+    <span class="s1">i_o_stock = int(o_stock)</span>
+    <span class="s1">i_f_stock = int(f_stock)</span>
+    <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\n</span><span class="s4">Stock contains:</span><span class="s0">\n\t{</span><span class="s1">i_n_stock</span><span class="s0">} </span><span class="s4">nickels</span><span class="s0">\n\t{</span><span class="s1">i_d_stock</span><span class="s0">} </span><span class="s4">dimes</span><span class="s0">\n\t{</span><span class="s1">i_q_stock</span><span class="s0">} </span><span class="s4">quarters</span><span class="s0">\n\t{</span><span class="s1">i_o_stock</span><span class="s0">} </span><span class="s4">ones</span><span class="s0">\n</span><span class="s4">&quot;</span>
+          <span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">i_f_stock</span><span class="s0">} </span><span class="s4">fives</span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s1">)</span>
+
+
+<span class="s0">def </span><span class="s1">menu():  </span><span class="s2"># print menu function, Chris Kau</span>
+    <span class="s3">&quot;&quot;&quot;description: prints the possible menu for deposits 
+       parameters: none 
+       returns: a printed deposit menu, no values&quot;&quot;&quot;</span>
+    <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Menu for deposits:&quot;</span><span class="s1">)</span>
+    <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">'n' - deposit a nickel</span><span class="s0">\n\t</span><span class="s4">'d' - deposit a dime</span><span class="s0">\n\t</span><span class="s4">'q' - deposit a quarter&quot;</span>
+          <span class="s4">&quot;</span><span class="s0">\n\t</span><span class="s4">'o' - deposit a one dollar bill</span><span class="s0">\n\t</span><span class="s4">'f' - deposit a five dollar bill</span><span class="s0">\n\t</span><span class="s4">'c' - cancel the purchase</span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s1">)</span>
+
+
+<span class="s0">def </span><span class="s1">refund_change(q_ref</span><span class="s0">, </span><span class="s1">d_ref</span><span class="s0">, </span><span class="s1">n_ref):  </span><span class="s2"># print refund amount, Chris Kau</span>
+    <span class="s3">&quot;&quot;&quot;description: prints the refund amount for each currency if there is any to refund of that type 
+       parameters: refund amounts for quarters, dimes, and nickels 
+       returns: printed refund statement, no values&quot;&quot;&quot;</span>
+    <span class="s0">if </span><span class="s1">q_ref &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if amount to refund is &gt; 0, print the amount.  otherwise, do not print for this type of currency</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">q_ref</span><span class="s0">} </span><span class="s4">quarter(s)&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">d_ref &gt; </span><span class="s5">0</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">d_ref</span><span class="s0">} </span><span class="s4">dime(s)&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">n_ref &gt; </span><span class="s5">0</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">n_ref</span><span class="s0">} </span><span class="s4">nickel(s)&quot;</span><span class="s1">)</span>
+
+
+<span class="s0">def </span><span class="s1">change_change(q_ch</span><span class="s0">, </span><span class="s1">d_ch</span><span class="s0">, </span><span class="s1">n_ch):  </span><span class="s2"># print change amount, Chris Kau</span>
+    <span class="s3">&quot;&quot;&quot;description: prints the change amount for each currency if there is any to return of that type 
+           parameters: change amounts for quarters, dimes, and nickels 
+           returns: printed change statement, no values&quot;&quot;&quot;</span>
+    <span class="s0">if </span><span class="s1">q_ch &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if amount of change is &gt; 0, print the amount.  otherwise, do not print for this type of currency</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">q_ch</span><span class="s0">} </span><span class="s4">quarter(s)&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">d_ch &gt; </span><span class="s5">0</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">d_ch</span><span class="s0">} </span><span class="s4">dime(s)&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">n_ch &gt; </span><span class="s5">0</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\t{</span><span class="s1">n_ch</span><span class="s0">} </span><span class="s4">nickel(s)&quot;</span><span class="s1">)</span>
+
+
+<span class="s0">def </span><span class="s1">stock_total(n_stock</span><span class="s0">, </span><span class="s1">d_stock</span><span class="s0">, </span><span class="s1">q_stock</span><span class="s0">, </span><span class="s1">o_stock</span><span class="s0">, </span><span class="s1">f_stock):  </span><span class="s2"># print total stock at end of code, Kathryn Woest</span>
+    <span class="s3">&quot;&quot;&quot;description: calculates the final stock and prints it once the user quits 
+       parameters: amount of each currency type 
+       returns: print statement of final stock, no values&quot;&quot;&quot;</span>
+    <span class="s2"># calculation for total stock using amount of each currency times how much each is worth and adding the products</span>
+    <span class="s1">total = int((n_stock * </span><span class="s5">5</span><span class="s1">) + (d_stock * </span><span class="s5">10</span><span class="s1">) + (q_stock * </span><span class="s5">25</span><span class="s1">) + (o_stock * </span><span class="s5">100</span><span class="s1">) + (f_stock * </span><span class="s5">500</span><span class="s1">))</span>
+    <span class="s1">dollar = total // </span><span class="s5">100</span>
+    <span class="s1">cents = total % </span><span class="s5">100</span>
+    <span class="s0">if </span><span class="s1">dollar &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if there is at least one full dollar, print with dollar.  otherwise, just print coins</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\n</span><span class="s4">Total: </span><span class="s0">{</span><span class="s1">dollar</span><span class="s0">} </span><span class="s4">dollar(s) and </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s4">f&quot;</span><span class="s0">\n</span><span class="s4">Total: </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+
+
+<span class="s0">def </span><span class="s1">main():  </span><span class="s2"># main code begins here, Chris Kau (61-112)</span>
+    <span class="s2"># initial stock</span>
+    <span class="s1">n_s = </span><span class="s5">25</span>
+    <span class="s1">d_s = </span><span class="s5">25</span>
+    <span class="s1">q_s = </span><span class="s5">25</span>
+    <span class="s1">o_s = </span><span class="s5">0</span>
+    <span class="s1">f_s = </span><span class="s5">0</span>
+    <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Welcome to the vending machine change maker program</span><span class="s0">\n</span><span class="s4">Change maker initialized.&quot;</span><span class="s1">)</span>
+    <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+    <span class="s1">price = input(</span><span class="s4">&quot;Enter the purchase price (xx.xx) or 'q' to quit: &quot;</span><span class="s1">)</span>
+    <span class="s0">while </span><span class="s1">price != </span><span class="s4">'q'</span><span class="s1">:  </span><span class="s2"># iterate through this loop until the user quits with 'q'</span>
+        <span class="s1">f_price = float(price)  </span><span class="s2"># convert the price entered into a float</span>
+        <span class="s1">original_price = round(f_price * </span><span class="s5">100</span><span class="s1">)  </span><span class="s2"># convert price into cents (this variable is a constant)</span>
+        <span class="s1">not_paid = round(f_price * </span><span class="s5">100</span><span class="s1">)  </span><span class="s2"># convert price into cents (this price will change throughout transaction)</span>
+        <span class="s0">if </span><span class="s1">original_price &lt; </span><span class="s5">0 </span><span class="s0">or </span><span class="s1">original_price % </span><span class="s5">5 </span><span class="s1">!= </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if price entered is not valid</span>
+            <span class="s1">print(</span><span class="s4">&quot;Illegal price: Must be a non-negative multiple of 5 cents.</span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s1">)</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">menu()</span>
+            <span class="s1">dollar = original_price // </span><span class="s5">100  </span><span class="s2"># find original price in dollars and cents</span>
+            <span class="s1">cents = original_price % </span><span class="s5">100</span>
+            <span class="s0">while </span><span class="s1">not_paid &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># iterate through this loop until the amount paid &gt;= the original price</span>
+                <span class="s0">if </span><span class="s1">dollar &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if there is at least one full dollar, print with dollar.  otherwise, just print coins</span>
+                    <span class="s1">print(</span><span class="s4">f&quot;Payment due: </span><span class="s0">{</span><span class="s1">dollar</span><span class="s0">} </span><span class="s4">dollar(s) and </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                    <span class="s1">deposit = input(</span><span class="s4">&quot;Indicate your deposit: &quot;</span><span class="s1">)</span>
+                <span class="s0">else</span><span class="s1">:</span>
+                    <span class="s1">print(</span><span class="s4">f&quot;Payment due: </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                    <span class="s1">deposit = input(</span><span class="s4">&quot;Indicate your deposit: &quot;</span><span class="s1">)</span>
+                <span class="s0">while </span><span class="s1">deposit != </span><span class="s4">'n' </span><span class="s0">and </span><span class="s1">deposit != </span><span class="s4">'d' </span><span class="s0">and </span><span class="s1">deposit != </span><span class="s4">'q' </span><span class="s0">and </span><span class="s1">deposit != </span><span class="s4">'o' </span><span class="s1">\</span>
+                        <span class="s0">and </span><span class="s1">deposit != </span><span class="s4">'f' </span><span class="s0">and </span><span class="s1">deposit != </span><span class="s4">'c'</span><span class="s1">:  </span><span class="s2"># iterate through this loop until deposit is valid</span>
+                    <span class="s1">print(</span><span class="s4">f&quot;Illegal selection: </span><span class="s0">{</span><span class="s1">deposit</span><span class="s0">}</span><span class="s4">&quot;</span><span class="s1">)</span>
+                    <span class="s0">if </span><span class="s1">dollar &gt; </span><span class="s5">0</span><span class="s1">:</span>
+                        <span class="s1">print(</span><span class="s4">f&quot;Payment due: </span><span class="s0">{</span><span class="s1">dollar</span><span class="s0">} </span><span class="s4">dollar(s) and </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                        <span class="s1">deposit = input(</span><span class="s4">&quot;Indicate your deposit: &quot;</span><span class="s1">)</span>
+                    <span class="s0">else</span><span class="s1">:</span>
+                        <span class="s1">print(</span><span class="s4">f&quot;Payment due: </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                        <span class="s1">deposit = input(</span><span class="s4">&quot;Indicate your deposit: &quot;</span><span class="s1">)</span>
+                <span class="s2"># check each type of deposit, subtract the deposit from the total price, and add to the total stock</span>
+                <span class="s0">if </span><span class="s1">deposit == </span><span class="s4">'n'</span><span class="s1">:</span>
+                    <span class="s1">not_paid -= </span><span class="s5">5</span>
+                    <span class="s1">n_s += </span><span class="s5">1</span>
+                <span class="s0">elif </span><span class="s1">deposit == </span><span class="s4">'d'</span><span class="s1">:</span>
+                    <span class="s1">not_paid -= </span><span class="s5">10</span>
+                    <span class="s1">d_s += </span><span class="s5">1</span>
+                <span class="s0">elif </span><span class="s1">deposit == </span><span class="s4">'q'</span><span class="s1">:</span>
+                    <span class="s1">not_paid -= </span><span class="s5">25</span>
+                    <span class="s1">q_s += </span><span class="s5">1</span>
+                <span class="s0">elif </span><span class="s1">deposit == </span><span class="s4">'o'</span><span class="s1">:</span>
+                    <span class="s1">not_paid -= </span><span class="s5">100</span>
+                    <span class="s1">o_s += </span><span class="s5">1</span>
+                <span class="s0">elif </span><span class="s1">deposit == </span><span class="s4">'f'</span><span class="s1">:</span>
+                    <span class="s1">not_paid -= </span><span class="s5">500</span>
+                    <span class="s1">f_s += </span><span class="s5">1</span>
+                <span class="s0">else</span><span class="s1">:  </span><span class="s2"># if the user enters 'c' for cancel: Kathryn Woest (113-216)</span>
+                    <span class="s1">refund = original_price - not_paid  </span><span class="s2"># calculate amount to refund</span>
+                    <span class="s0">if </span><span class="s1">refund != </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if there is money to refund:</span>
+                        <span class="s2"># move through each currency type and refund what is possible from each</span>
+                        <span class="s1">q_possible = refund // </span><span class="s5">25  </span><span class="s2"># find the max number of quarters that go into refund</span>
+                        <span class="s0">if </span><span class="s1">q_possible &gt;= q_s:  </span><span class="s2"># if max number is &gt;= what is in the stock:</span>
+                            <span class="s1">q_refund = int(q_s)  </span><span class="s2"># refund what is in the stock</span>
+                            <span class="s1">q_s = </span><span class="s5">0  </span><span class="s2"># set the stock to 0</span>
+                            <span class="s1">refund -= (q_refund * </span><span class="s5">25</span><span class="s1">)  </span><span class="s2"># subtract the quarters refund from the total refund</span>
+                        <span class="s0">else</span><span class="s1">:  </span><span class="s2"># if max number is &lt; what is in the stock:</span>
+                            <span class="s1">q_refund = int(q_possible)  </span><span class="s2"># refund the max number</span>
+                            <span class="s1">q_s -= q_possible  </span><span class="s2"># subtract the max number from the stock</span>
+                            <span class="s1">refund -= (q_refund * </span><span class="s5">25</span><span class="s1">)  </span><span class="s2"># subtract the quarters refund from the total refund</span>
+                        <span class="s1">d_possible = refund // </span><span class="s5">10  </span><span class="s2"># repeat for dimes and nickels</span>
+                        <span class="s0">if </span><span class="s1">d_possible &gt;= d_s:</span>
+                            <span class="s1">d_refund = int(d_s)</span>
+                            <span class="s1">d_s = </span><span class="s5">0</span>
+                            <span class="s1">refund -= (d_refund * </span><span class="s5">10</span><span class="s1">)</span>
+                        <span class="s0">else</span><span class="s1">:</span>
+                            <span class="s1">d_refund = int(d_possible)</span>
+                            <span class="s1">d_s -= d_possible</span>
+                            <span class="s1">refund -= (d_refund * </span><span class="s5">10</span><span class="s1">)</span>
+                        <span class="s1">n_possible = refund // </span><span class="s5">5</span>
+                        <span class="s0">if </span><span class="s1">n_possible &gt;= n_s:</span>
+                            <span class="s1">n_refund = int(n_s)</span>
+                            <span class="s1">n_s = </span><span class="s5">0</span>
+                            <span class="s1">refund -= (n_refund * </span><span class="s5">5</span><span class="s1">)</span>
+                        <span class="s0">else</span><span class="s1">:</span>
+                            <span class="s1">n_refund = int(n_possible)</span>
+                            <span class="s1">n_s -= n_possible</span>
+                            <span class="s1">refund -= (n_refund * </span><span class="s5">5</span><span class="s1">)</span>
+                        <span class="s0">if </span><span class="s1">refund &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if, once you go through all currency types, there is still money to refund:</span>
+                            <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Please take the change below.&quot;</span><span class="s1">)</span>
+                            <span class="s1">refund_change(q_refund</span><span class="s0">, </span><span class="s1">d_refund</span><span class="s0">, </span><span class="s1">n_refund)</span>
+                            <span class="s1">print(</span><span class="s4">&quot;Machine is out of change.</span><span class="s0">\n</span><span class="s4">See store manager for remaining refund.&quot;</span><span class="s1">)</span>
+                            <span class="s1">dollar = refund // </span><span class="s5">100</span>
+                            <span class="s1">cents = refund % </span><span class="s5">100</span>
+                            <span class="s0">if </span><span class="s1">dollar &gt; </span><span class="s5">0</span><span class="s1">:</span>
+                                <span class="s1">print(</span><span class="s4">f&quot;Amount due is: </span><span class="s0">{</span><span class="s1">dollar</span><span class="s0">} </span><span class="s4">dollar(s) and </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                            <span class="s0">else</span><span class="s1">:</span>
+                                <span class="s1">print(</span><span class="s4">f&quot;Amount due is: </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                            <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+                            <span class="s0">break  </span><span class="s2"># exit the loop and skip to asking the user for a new price/q input</span>
+                        <span class="s0">else</span><span class="s1">:  </span><span class="s2"># if the stock can match the refund amount exactly:</span>
+                            <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Please take the change below.&quot;</span><span class="s1">)</span>
+                            <span class="s1">refund_change(q_refund</span><span class="s0">, </span><span class="s1">d_refund</span><span class="s0">, </span><span class="s1">n_refund)</span>
+                            <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+                            <span class="s0">break  </span><span class="s2"># exit the loop and skip to asking the user for a new price/q input</span>
+                    <span class="s0">else</span><span class="s1">:  </span><span class="s2"># if the amount to be refunded is 0:</span>
+                        <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Please take the change below.&quot;</span><span class="s1">)</span>
+                        <span class="s1">print(</span><span class="s4">&quot;  No change due.&quot;</span><span class="s1">)</span>
+                        <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+                        <span class="s0">break  </span><span class="s2"># exit the loop and skip to asking the user for a new price/q input</span>
+                <span class="s1">dollar = not_paid // </span><span class="s5">100  </span><span class="s2"># recalculate the dollar and cents of remaining price and return to top</span>
+                <span class="s1">cents = not_paid % </span><span class="s5">100</span>
+            <span class="s0">if </span><span class="s1">not_paid &lt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if the user pays more than the original price, we need to calculate change:</span>
+                <span class="s1">change = -not_paid  </span><span class="s2"># calculate change</span>
+                <span class="s2"># move through each currency type and give change for what is possible from each</span>
+                <span class="s1">q_possible = change // </span><span class="s5">25  </span><span class="s2"># repeat refund steps but with new variables for change</span>
+                <span class="s0">if </span><span class="s1">q_possible &gt;= q_s:</span>
+                    <span class="s1">q_change = int(q_s)</span>
+                    <span class="s1">q_s = </span><span class="s5">0</span>
+                    <span class="s1">change -= (q_change * </span><span class="s5">25</span><span class="s1">)</span>
+                <span class="s0">else</span><span class="s1">:</span>
+                    <span class="s1">q_change = int(q_possible)</span>
+                    <span class="s1">q_s -= q_possible</span>
+                    <span class="s1">change -= (q_change * </span><span class="s5">25</span><span class="s1">)</span>
+                <span class="s1">d_possible = change // </span><span class="s5">10</span>
+                <span class="s0">if </span><span class="s1">d_possible &gt;= d_s:</span>
+                    <span class="s1">d_change = int(d_s)</span>
+                    <span class="s1">d_s = </span><span class="s5">0</span>
+                    <span class="s1">change -= (d_change * </span><span class="s5">10</span><span class="s1">)</span>
+                <span class="s0">else</span><span class="s1">:</span>
+                    <span class="s1">d_change = int(d_possible)</span>
+                    <span class="s1">d_s -= d_possible</span>
+                    <span class="s1">change -= (d_change * </span><span class="s5">10</span><span class="s1">)</span>
+                <span class="s1">n_possible = change // </span><span class="s5">5</span>
+                <span class="s0">if </span><span class="s1">n_possible &gt;= n_s:</span>
+                    <span class="s1">n_change = int(n_s)</span>
+                    <span class="s1">n_s = </span><span class="s5">0</span>
+                    <span class="s1">change -= (n_change * </span><span class="s5">5</span><span class="s1">)</span>
+                <span class="s0">else</span><span class="s1">:</span>
+                    <span class="s1">n_change = int(n_possible)</span>
+                    <span class="s1">n_s -= n_possible</span>
+                    <span class="s1">change -= (n_change * </span><span class="s5">5</span><span class="s1">)</span>
+                <span class="s0">if </span><span class="s1">change &gt; </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if, once you go through all currency types, there is still money to return:</span>
+                    <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Please take the change below.&quot;</span><span class="s1">)</span>
+                    <span class="s1">change_change(q_change</span><span class="s0">, </span><span class="s1">d_change</span><span class="s0">, </span><span class="s1">n_change)</span>
+                    <span class="s1">print(</span><span class="s4">&quot;Machine is out of change.</span><span class="s0">\n</span><span class="s4">See store manager for remaining refund.&quot;</span><span class="s1">)</span>
+                    <span class="s1">dollar = change // </span><span class="s5">100</span>
+                    <span class="s1">cents = change % </span><span class="s5">100</span>
+                    <span class="s0">if </span><span class="s1">dollar &gt; </span><span class="s5">0</span><span class="s1">:</span>
+                        <span class="s1">print(</span><span class="s4">f&quot;Amount due is: </span><span class="s0">{</span><span class="s1">dollar</span><span class="s0">} </span><span class="s4">dollar(s) and </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                    <span class="s0">else</span><span class="s1">:</span>
+                        <span class="s1">print(</span><span class="s4">f&quot;Amount due is: </span><span class="s0">{</span><span class="s1">cents</span><span class="s0">} </span><span class="s4">cents&quot;</span><span class="s1">)</span>
+                    <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+                <span class="s0">else</span><span class="s1">:  </span><span class="s2"># if change can be dispensed exactly:</span>
+                    <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Please take the change below.&quot;</span><span class="s1">)</span>
+                    <span class="s1">change_change(q_change</span><span class="s0">, </span><span class="s1">d_change</span><span class="s0">, </span><span class="s1">n_change)</span>
+                    <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+            <span class="s0">elif </span><span class="s1">not_paid == </span><span class="s5">0</span><span class="s1">:  </span><span class="s2"># if the user enters the exact amount needed to pay:</span>
+                <span class="s1">print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Please take the change below.&quot;</span><span class="s1">)</span>
+                <span class="s1">print(</span><span class="s4">&quot;  No change due.&quot;</span><span class="s1">)</span>
+                <span class="s1">stock(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)</span>
+        <span class="s2"># ask again for a new input, then loop to the top and check to see if it is 'q', Chris Kau (217-224)</span>
+        <span class="s1">price = input(</span><span class="s4">&quot;Enter the purchase price (xx.xx) or 'q' to quit: &quot;</span><span class="s1">)</span>
+    <span class="s1">stock_total(n_s</span><span class="s0">, </span><span class="s1">d_s</span><span class="s0">, </span><span class="s1">q_s</span><span class="s0">, </span><span class="s1">o_s</span><span class="s0">, </span><span class="s1">f_s)  </span><span class="s2"># print the total stock once the user quits</span>
+
+
+<span class="s0">if </span><span class="s1">__name__ == </span><span class="s4">&quot;__main__&quot;</span><span class="s1">:  </span><span class="s2"># run the main code</span>
+    <span class="s1">main()</span>
+</pre>
+</body>
+</html>
