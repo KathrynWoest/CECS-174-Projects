@@ -1,4 +1,4 @@
-def stock(n_stock, d_stock, q_stock, o_stock, f_stock):  # print stock function, Chris Kau
+def stock(n_stock, d_stock, q_stock, o_stock, f_stock):  # print stock function
     """description: prints the stock of the machine
        parameters: each type of possible currency for stock
        returns: a printed stock menu, no values"""
@@ -11,7 +11,7 @@ def stock(n_stock, d_stock, q_stock, o_stock, f_stock):  # print stock function,
           f"\t{i_f_stock} fives\n")
 
 
-def menu():  # print menu function, Chris Kau
+def menu():  # print menu function
     """description: prints the possible menu for deposits
        parameters: none
        returns: a printed deposit menu, no values"""
@@ -20,7 +20,7 @@ def menu():  # print menu function, Chris Kau
           "\n\t'o' - deposit a one dollar bill\n\t'f' - deposit a five dollar bill\n\t'c' - cancel the purchase\n")
 
 
-def refund_change(q_ref, d_ref, n_ref):  # print refund amount, Chris Kau
+def refund_change(q_ref, d_ref, n_ref):  # print refund amount
     """description: prints the refund amount for each currency if there is any to refund of that type
        parameters: refund amounts for quarters, dimes, and nickels
        returns: printed refund statement, no values"""
@@ -32,7 +32,7 @@ def refund_change(q_ref, d_ref, n_ref):  # print refund amount, Chris Kau
         print(f"\t{n_ref} nickel(s)")
 
 
-def change_change(q_ch, d_ch, n_ch):  # print change amount, Chris Kau
+def change_change(q_ch, d_ch, n_ch):  # print change amount
     """description: prints the change amount for each currency if there is any to return of that type
            parameters: change amounts for quarters, dimes, and nickels
            returns: printed change statement, no values"""
@@ -44,7 +44,7 @@ def change_change(q_ch, d_ch, n_ch):  # print change amount, Chris Kau
         print(f"\t{n_ch} nickel(s)")
 
 
-def stock_total(n_stock, d_stock, q_stock, o_stock, f_stock):  # print total stock at end of code, Kathryn Woest
+def stock_total(n_stock, d_stock, q_stock, o_stock, f_stock):  # print total stock at end of code
     """description: calculates the final stock and prints it once the user quits
        parameters: amount of each currency type
        returns: print statement of final stock, no values"""
@@ -58,7 +58,7 @@ def stock_total(n_stock, d_stock, q_stock, o_stock, f_stock):  # print total sto
         print(f"\nTotal: {cents} cents")
 
 
-def main():  # main code begins here, Chris Kau (61-112)
+def main():  # main code begins here
     # initial stock
     n_s = 25
     d_s = 25
@@ -110,7 +110,7 @@ def main():  # main code begins here, Chris Kau (61-112)
                 elif deposit == 'f':
                     not_paid -= 500
                     f_s += 1
-                else:  # if the user enters 'c' for cancel: Kathryn Woest (113-216)
+                else:  # if the user enters 'c' for cancel:
                     refund = original_price - not_paid  # calculate amount to refund
                     if refund != 0:  # if there is money to refund:
                         # move through each currency type and refund what is possible from each
@@ -214,7 +214,7 @@ def main():  # main code begins here, Chris Kau (61-112)
                 print("\nPlease take the change below.")
                 print("  No change due.")
                 stock(n_s, d_s, q_s, o_s, f_s)
-        # ask again for a new input, then loop to the top and check to see if it is 'q', Chris Kau (217-224)
+        # ask again for a new input, then loop to the top and check to see if it is 'q'
         price = input("Enter the purchase price (xx.xx) or 'q' to quit: ")
     stock_total(n_s, d_s, q_s, o_s, f_s)  # print the total stock once the user quits
 
